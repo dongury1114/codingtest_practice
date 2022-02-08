@@ -1,15 +1,10 @@
-const arr = [];
-
-arr[0] = 1;
-arr[1] = 2;
-arr[2] = 3;
-
-for(var i = 0; i < arr.length; i++){
-    console.log(arr[i]);
-}
-
-var arr = ['zero', 'one', 'tow']; 
-
-for (var i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+const fs = require("fs");
+const input = fs
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split(" ")
+  .map(BigInt);
+let answer = input[0] / input[1] + "\n";
+answer += input[0] % input[1];
+console.log(answer);
