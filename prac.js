@@ -1,39 +1,13 @@
-var arr = [];
+const fs = require("fs");
 
-arr[0] = "zero";
-arr[1] = "one";
-arr[2] = "tow";
+const input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 
-for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
+const input1 = input[0].split(" ").map(Number);
+const input2 = input[1].split(" ").map(Number);
 
-var arr = ["zero", "one", "tow"];
+const people = input1[0];
+const area = input1[1];
 
-for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
+const answer = input2.map((i) => i - people * area);
 
-var arr = [, , ,];
-
-for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
-
-// 배열 생성 (빈 배열)
-var arr = new Array();
-
-arr[0] = "zero";
-arr[1] = "one";
-arr[2] = "tow";
-
-for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
-
-// 배열 생성 (초기 값 할당)
-var arr = new Array("zero", "one", "tow");
-
-for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
+console.log(answer);
