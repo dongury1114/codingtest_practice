@@ -11,3 +11,9 @@ const area = input1[1];
 const answer = input2.map((i) => i - people * area);
 
 console.log(answer);
+
+
+.  .   .
+|  | _ | _. _ ._ _  _
+|/\|(/.|(_.(_)[ | )(/.
+    
